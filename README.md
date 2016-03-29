@@ -7,3 +7,5 @@ It can add the following arttypes:
 - clearart
 - banner
 - discart
+
+Has been tested on Windows and Raspberry Pi 3 with OSMC.
