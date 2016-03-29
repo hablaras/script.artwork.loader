@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="General">
+        <setting label="Add clearlogo" id="addclearlogo" type="bool" default="true"/>
+				<setting label="Clearlogo" id="clearlogo" enable="eq(-1,true)" subsetting="true" type="text" default="-logo.png"/>
+
+        <setting label="Add clearart" id="addclearart" type="bool" default="true"/> 				
+				<setting label="Clearart" id="clearart" enable="eq(-1,true)" subsetting="true" type="text" default="-art.png"/>
+
+        <setting label="Add banner" id="addbanner" type="bool" default="false"/> 				
+				<setting label="Banner" id="banner" enable="eq(-1,true)" subsetting="true" type="text" default="-banner.png"/>
+				
+				<setting label="Add discart" id="adddiscart" type="bool" default="false"/> 				
+				<setting label="Discart" id="discart" enable="eq(-1,true)" subsetting="true" type="text" default="-discart.png"/>
+				
+				<setting label="Overwrite existing" id="overwrite" type="bool" default="true"/>
+        <setting label="Debug" id="debug_enabled" type="bool" default="true"/>
+    </category>
+</settings>
