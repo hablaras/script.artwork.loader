@@ -71,8 +71,8 @@ addonname = addon.getAddonInfo('name')
 
 # xbmcgui.Dialog().ok(addonname, line1, line2, line3)
 p = xbmcgui.DialogProgress()
-p.create("Start parsing clearlogos for movies")
-time.sleep(1)
+p.create("Start loading movie artwork")
+# time.sleep(1)
 
 # artwork to add
 artwork = {}
