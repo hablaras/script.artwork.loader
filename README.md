@@ -32,6 +32,15 @@ clearlogo = "-clearlogo.jpg" instead of "-logo.png"
 
 This addon also gives you the possibility to create your own second-rate clearlogos, because getting a image approved on e.g. fanart.tv can be a pain because of the high quality they expect.
 
+## Installation
+
+Copy the contents of the master.zip file excluding the foldername script.artwork.loader to:
+- OSMC from Windows SMB: \\<ipadres>\osmc\.kodi\addons\script.artwork.loader
+- OSMC using SFTP: \\<ipadres>\osmc\.kodi\addons\script.artwork.loader
+- Windows: <windows root>:\Users\<username>\appData\Roaming\Kodi\addons\script.artwork.loader
+
+And restart Kodi.
+
 ## Inner workings
 
 The addon works like this:
