@@ -25,12 +25,21 @@ This is different from the "artwork downloader", which can load local files, but
 
 The "artwork loader" expects each image to be named after the movie and in the same folder as the movie, but all movies and images can be in a single folder.
 
+## Settings
+
 The postfix of each artwork type can be specified in the settings section of the the add-on.
 
 For example:
 clearlogo = "-clearlogo.jpg" instead of "-logo.png"
 
 This addon also gives you the possibility to create your own second-rate clearlogos, because getting a image approved on e.g. fanart.tv can be a pain because of the high quality they expect.
+
+It is also possible to use the same image for multiple artworks.
+
+For example, specify this in settings to use the logo for both clearlogo and clearart:
+
+clearlogo = "-logo.png" 
+clearart = "-logo.png" 
 
 ## Installation
 
