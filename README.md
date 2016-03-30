@@ -14,11 +14,12 @@ The "artwork downloader" always downloads files from e.g. fanart.tv, but has no 
 
 This addon expects the artwork files to be "sidecar" files, so in the same folder as the movie and named like this:
 
-c:\movies\a.mp4
-c:\movies\a-logo.png
+- c:\movies\a.mp4
+- c:\movies\a-logo.png
 
-//there/are/movies/here/movie1.mkv
-//there/are/movies/here/movie1-art.png
+or
+- //there/are/movies/here/movie1.mkv
+- //there/are/movies/here/movie1-art.png
 
 This is different from the "artwork downloader", which can load local files, but expects each movie to be in its own folder with a generic "logo.png" file. 
 
