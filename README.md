@@ -27,6 +27,8 @@ The "artwork loader" expects each image to be named after the movie and in the s
 
 ## Settings
 
+In settings you can specify which artwork type should be added by enabling or disabling it.
+
 The postfix of each artwork type can be specified in the settings section of the the add-on.
 
 For example:
@@ -38,8 +40,8 @@ It is also possible to use the same image for multiple artworks.
 
 For example, specify this in settings to use the logo for both clearlogo and clearart:
 
-clearlogo = "-logo.png" 
-clearart = "-logo.png" 
+- clearlogo = "-logo.png" 
+- clearart = "-logo.png"
 
 ## Installation
 
