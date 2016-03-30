@@ -34,12 +34,15 @@ This addon also gives you the possibility to create your own second-rate clearlo
 
 ## Installation
 
-Copy the contents of the master.zip file excluding the foldername script.artwork.loader to:
-- OSMC from Windows SMB: \\<ipadres>\osmc\.kodi\addons\script.artwork.loader
-- OSMC using SFTP: \\<ipadres>\osmc\.kodi\addons\script.artwork.loader
-- Windows: <windows root>:\Users\<username>\appData\Roaming\Kodi\addons\script.artwork.loader
+1. Click Download ZIP in the top-right corner on github
+2. Copy the contents of the master.zip file including the foldername script.artwork.loader to:
+  - OSMC from Windows SMB: \\<ipadres>\osmc\.kodi\addons\
+  - OSMC using SFTP: \\<ipadres>\osmc\.kodi\addons\
+  - Windows: <windows root>:\Users\<username>\appData\Roaming\Kodi\addons\
 
 And restart Kodi.
+
+Or use the Kodi interface to add an addon from zip file.
 
 ## Inner workings
 
