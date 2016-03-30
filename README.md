@@ -1,4 +1,4 @@
-# script.artwork.loader
+# Script.artwork.loader
 
 This Kodi addon will add local artwork to the Kodi database for movies.
 
@@ -30,21 +30,26 @@ The postfix of each artwork type can be specified in the settings section of the
 For example:
 clearlogo = "-clearlogo.jpg" instead of "-logo.png"
 
-# Inner workings
+## Inner workings
 
 The addon works like this:
 - Get a list of all movies in the Kodi database using the JSON-RPC API
-- For each movie, check which artwork types should be added, as configured in settings
--- if none are specified, the addon exits
--- for each artwork type, check if that artwork file exists on disk next to the movie:
---- if it does, overwrite existing artwork entry in the database using the JSON-RPC API and refresh the thumbnail cache for this image
---- if it doesn't, check next artwork type
---- if all artwork types have been checked for the movie, goto next movie on the list
+- For each movie, check which artwork types should be added, as configured in settings. If none are specified, the addon exits
+  - For each artwork type, check if that artwork file exists on disk next to the movie:
+    - if it does, overwrite existing artwork entry in the database using the JSON-RPC API and refresh the thumbnail cache for this image
+    - if it doesn't, check next artwork type
+    - if all artwork types have been checked for the movie, goto next movie on the list
 - Quit if all movies have been parsed
+
+## Testing
 
 Has been tested on Windows and Raspberry Pi 3 with OSMC.
 
-# To be done
+## To be done
 - Error handling, e.g adding .xyz as an extension in settings will not be handled properly
 - Adding artwork for other media than just movies 
 - There can be only one image file type per artwork type, e.g. all logos are png or jpg, but there can be no mix of them
+
+## Acknowledgements
+
+Most of the code in the lib folder is a shameless rip from the script.artwork.downloader addon by Martijn Kaijser. However, only two or three functions from his code are used.
