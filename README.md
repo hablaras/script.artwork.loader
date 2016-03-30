@@ -30,6 +30,8 @@ The postfix of each artwork type can be specified in the settings section of the
 For example:
 clearlogo = "-clearlogo.jpg" instead of "-logo.png"
 
+This addon also gives you the possibility to create your own second-rate clearlogos, because getting a image approved on e.g. fanart.tv can be a pain because of the high quality they expect.
+
 ## Inner workings
 
 The addon works like this:
@@ -52,4 +54,4 @@ Has been tested on Windows and Raspberry Pi 3 with OSMC.
 
 ## Acknowledgements
 
-Most of the code in the lib folder is a shameless rip from the script.artwork.downloader addon by Martijn Kaijser. However, only two or three functions from his code are used.
+Most of the code in the lib folder is a shameless rip from the script.artwork.downloader addon by **Martijn Kaijser**. However, only two or three functions from his code are used.
