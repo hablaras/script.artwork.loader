@@ -1,6 +1,6 @@
 # Script.artwork.loader
 
-This Kodi addon will add local artwork to the Kodi database for movies.
+This Kodi addon will add local artwork to the Kodi database **for movies only**.
 
 It can add the following artwork types:
 - clearlogo
@@ -8,9 +8,9 @@ It can add the following artwork types:
 - banner
 - discart
 
-Kodi itself cannot add these artwork types to the database at the time of writing (Kodi 16.1 or earlier). It CAN add poster and fanart via the nfo file, but not e.g. a clearlogo.
+Kodi itself cannot add these artwork types to the database at the time of writing (Kodi 16.1 or earlier). It **can** add poster and fanart via the nfo file, but not e.g. a clearlogo.
 
-The "artwork downloader" always downloads files from e.g. fanart.tv, but has no option to load "sidecar" images from disk.
+Compared to the "artwork downloader" addon: that one downloads files from e.g. fanart.tv, but has no option to load "sidecar" images from disk.
 
 This addon expects the artwork files to be "sidecar" files, so in the same folder as the movie and named like this:
 
@@ -34,7 +34,7 @@ The postfix of each artwork type can be specified in the settings section of the
 For example:
 clearlogo = "-clearlogo.jpg" instead of "-logo.png"
 
-This addon also gives you the possibility to create your own second-rate clearlogos, because getting a image approved on e.g. fanart.tv can be a pain because of the high quality they expect.
+This addon also gives you the possibility to create your own second-rate clearlogos, because getting an image approved on e.g. fanart.tv can be cumbersome because of the high level of quality they expect.
 
 It is also possible to use the same image for multiple artworks.
 
@@ -73,10 +73,10 @@ If the disk is unavailable, e.g. an external drive with the movies is not attach
 Has been tested on Windows and Raspberry Pi 3 with OSMC.
 
 ## To be done
-- Error handling, e.g adding .xyz as an extension in settings will not be handled properly
+- Error handling, e.g adding .xyz as an extension in settings, which would load a non-image file, will not be handled properly
 - Adding artwork for other media than just movies 
 - There can be only one image file type per artwork type, e.g. all logos are png or jpg, but there can be no mix of them
 
 ## Acknowledgements
 
-Most of the code in the lib folder is a shameless rip from the script.artwork.downloader addon by **Martijn Kaijser**. However, only two or three functions from his code are used.
+Most of the code in the lib folder is a shameless rip from the script.artwork.downloader addon by **Martijn Kaijser**. However, only two or three functions from his code are used and I've already removed a lot of code from it which is not needed by this addon.
