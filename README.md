@@ -55,6 +55,8 @@ The addon works like this:
     - if all artwork types have been checked for the movie, goto next movie on the list
 - Quit if all movies have been parsed
 
+If the disk is unavailable, e.g. an external drive with the movies is not attached, it will not find any artwork and not add anything to the Kodi database.
+
 ## Testing
 
 Has been tested on Windows and Raspberry Pi 3 with OSMC.
