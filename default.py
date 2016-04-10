@@ -14,8 +14,10 @@ THUMBS_CACHE_PATH = xbmc.translatePath( "special://profile/Thumbnails/Video" )
 
 # log to kodi log if log setting is true
 def log( txt ):
-    if (addon.getSetting("log_enabled")):
-    	xbmc.log( txt )
+    if (addon.getSetting("debug_enabled").lower() == "true"):
+        if isinstance(txt, unicode):
+            txt = txt.encode('utf-8')
+        xbmc.log( txt, level=xbmc.LOGNOTICE )
     return
 
 # retrieve cache filename
@@ -42,9 +44,9 @@ def get_cached_thumb(filename):
 def erase_current_cache(filename):
     try: 
         cached_thumb = get_cached_thumb(filename)
-        log( "Cache file %s" % cached_thumb )
-        # if xbmcvfs.exists( cached_thumb.replace("png" , "dds").replace("jpg" , "dds") ):
-        #     xbmcvfs.delete( cached_thumb.replace("png" , "dds").replace("jpg" , "dds") )
+        log( "File: %s, Cache file: %s" % (filename,cached_thumb) )
+        #if xbmcvfs.exists( cached_thumb.replace("png" , "dds").replace("jpg" , "dds") ):
+        #    xbmcvfs.delete( cached_thumb.replace("png" , "dds").replace("jpg" , "dds") )
         if xbmcvfs.exists( cached_thumb ):
             xbmcvfs.delete( cached_thumb )
         copy = xbmcvfs.copy( filename , cached_thumb )
@@ -116,8 +118,8 @@ for item in mediaList:
         xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "VideoLibrary.SetMovieDetails", "params": { "movieid": %i, "art": %s } }, "id": 1 }'%( item['dbid'], art_json ))   
 	    # xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "VideoLibrary.SetMovieDetails", "params": { "movieid": %i, "trailer" : "%s", "art": { "%s": "%s" } }, "id": 1 }'%( item['dbid'], thumb.replace("\\","\\\\"), "clearlogo", locallogo_url ))
 	    # refresh kodi thumbnail to be sure a different local logo with the same name gets put in that cache 
-        for k in art:
-	    	erase_current_cache(k)
+        for k,v in art.items():
+	    	erase_current_cache(v)
 	    # p.update(100*itemcount/itemtotal, "Refreshed thumb: " + thumb)
 
 time.sleep(1) # delays for 1 seconds
